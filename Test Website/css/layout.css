@@ -1,0 +1,195 @@
+html * {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.navbar{
+    padding-top: 0%;
+    height: 40px;
+    width: 100vw;
+    background-color: #000000;
+    z-index: 102;
+    position: sticky;
+    top:0;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+.navbar ul {
+    list-style-type: none;
+    width: 100%
+}
+.navbar ul li {
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+    line-height: 37px;
+}
+.navbar ul li:hover{
+    background-color: #a1a1a1;
+    cursor: pointer;
+
+
+}
+.banner{
+    width: 100vw;
+    position: relative;
+    padding-bottom: 0px;
+    background-color: #000000;
+}
+.banner img{
+    width: 100vw;
+    z-index: 100;
+}
+.banner .banner-Text{
+    position:absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    z-index: 101;
+    color: whitesmoke;
+}
+.banner-Text p{
+    margin:15px;
+
+}
+.banner-Text-Header{
+    font-size: 1.5em;
+}
+
+.nerv-Container{
+    width: 100vw;
+    height: 400px;
+    background-color: white;
+}
+.nerv-Container h2{
+    color: black;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+.nerv-Container p{
+    font-weight: 200;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+.nerv-Container p.nerv-Container-Subtitle{
+    color: #666;
+    font-weight: 100;
+}
+.nerv-Container p.nerv-Container-Content{
+
+    width: 80%;
+    min-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.pilots {
+    width: 80%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    
+}
+.pilots ul{
+    width: 100%;
+    list-style-type: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pilots ul li {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+.pilots ul li img{
+    width: 63%;
+    max-width: 200px;
+    min-width: 100px;
+    height: auto;
+}
+
+.mechas-Container{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    padding-bottom: 100px;
+}
+.mechas-Container h2{
+    color: #666;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+.mechas-Container p{
+    font-weight: 200;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+.mechas-Container p.mechas-Container-Subtitle{
+    color: #666;
+    font-weight: 100;
+    padding: 20px;
+}
+.mechas-State{
+    width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
+.mechas-State ul{
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+}
+.mechas-State ul li{
+    padding-top: 20px;
+    height: 40px;
+    border-bottom: 1px solid #a1a1a140;
+}
+.mechas-State ul li span{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+}
+span.mechas-Status-Operational{
+    background-color: teal;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+span.mechas-Status-Missing{
+    background-color: peru;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+span.mechas-Status-Damaged{
+    background-color: tomato;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}

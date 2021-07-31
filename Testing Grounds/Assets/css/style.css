@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.banner-Text{
+    width: 100%;
+    position: absolute;
+}
+.banner-Text ul{
+    height: 50px;
+    float: right;
+    color: #fff;
+    list-style-type: none;
+}
+.banner-Text ul li{
+    display: inline-block;
+    padding: 40px 15px;
+    
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+}
+.banner-Text h2{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+/* Animation area for the floating boxes */
+.animation-Area{
+    /* background: linear-gradient(to left, #8942a8, #ba382f); */
+    width: 100%;
+    height: 100%;
+    animation: animatedGradient 30s ease infinite;
+}
+.box-Area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.box-Area li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255,255,255,0.2);
+    animation: animatedBoxes 20s linear infinite;
+    /* animation: particleUp 20s linear infinite; */
+    bottom: -150px;
+}
+/* li childs are the boxes that will get animated */
+.box-Area li:nth-child(1){
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.box-Area li:nth-child(2){
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+}
+.box-Area li:nth-child(3){
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+.box-Area li:nth-child(4){
+    left: 70%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 15s;
+    animation-duration: 15s;
+}
+.box-Area li:nth-child(5){
+    left: 65%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 5s;
+}
+.box-Area li:nth-child(6){
+    left: 15%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 7.5s;
+}
+/* This part handles the animated squares*/
+@keyframes animatedBoxes{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-8000px) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* The gradient the background will have is declared here */
+.animation-Area {
+    background: linear-gradient(257deg, #d43322, #000000);
+    background-size: 400% 400%;
+} 
+/* This part handles the animated gradient background*/
+@keyframes animatedGradient {
+    0%{background-position:0% 38%}
+    50%{background-position:100% 63%}
+    100%{background-position:0% 38%}
+}
+
+@keyframes scaleUpDown {
+    0%,
+    100% {
+      transform: scaleY(1) scaleX(1);
+    }
+    50%,
+    90% {
+      transform: scaleY(1.1);
+    }
+    75% {
+      transform: scaleY(0.95);
+    }
+    80% {
+      transform: scaleX(0.95);
+    }
+  }
+  
+  @keyframes shake {
+    0%,
+    100% {
+      transform: skewX(0) scale(1);
+    }
+    50% {
+      transform: skewX(5deg) scale(0.9);
+    }
+  }
+  
+  @keyframes particleUp {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      top: -100%;
+      transform: scale(0.5);
+    }
+  }
+  
+  @keyframes glow {
+    0%,
+    100% {
+      background-color: #ef5a00;
+    }
+    50% {
+      background-color: #ff7800;
+    }
+  }
+  
+  .fire {
+    
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .fire-main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: scaleUpDown 3s ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  
+  .fire-main .main-fire {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: drop-shadow(0 0 10px #d43322);
+  }
+  
+  .fire-main .particle-fire {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    background-color: #ef5a00;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px #d43322);
+    animation: particleUp 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  
+  .fire-right {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: shake 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  
+  .fire-right .main-fire {
+    position: absolute;
+    top: 15%;
+    right: -25%;
+    width: 80%;
+    height: 80%;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: drop-shadow(0 0 10px #d43322);
+  }
+  
+  .fire-right .particle-fire {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px #d43322);
+    animation: particleUp 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  
+  .fire-left {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: shake 3s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  
+  .fire-left .main-fire {
+    position: absolute;
+    top: 15%;
+    left: -20%;
+    width: 80%;
+    height: 80%;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: drop-shadow(0 0 10px #d43322);
+  }
+  
+  .fire-left .particle-fire {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 10%;
+    height: 10%;
+    background-color: #ef5a00;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px #d43322);
+    animation: particleUp 3s infinite ease-out 0;
+    animation-fill-mode: both;
+  }
+  
+  .fire-bottom .main-fire {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 75%;
+    height: 75%;
+    background-color: #ff7800;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 100% 40%;
+    filter: blur(10px);
+    animation: glow 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    }
